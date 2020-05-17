@@ -1,0 +1,9 @@
+<h1>Artist Page</h1>
+<%= @artist.name%><br>
+<%= link_to("Delete?", artist_path(@artist.id), method: :delete, data: {confirm: "Wanna delete this artist?"}) %><br>
+<h4>This artist has painted these paintings:</h4>
+<% @artist.paintings.each do |paint| %>
+<%= link_to  "#{paint.title}", painting_path(paint.id) %><br>
+<% end %>
+<br><%= link_to  "Back", artists_path %><br>
+<br><%= link_to  "Edit Artist?", edit_artist_path %>

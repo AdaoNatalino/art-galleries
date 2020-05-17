@@ -1,0 +1,18 @@
+<%= form_for(@painting) do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title %><br>
+
+<% artist_names = Artist.all.map{|a| a.name} %>
+<% gallery_names = Gallery.all.map{|a| a.name} %>
+
+
+<%= f.label :artist_name %>
+<%= f.select :artist, artist_names%><br>
+
+<%= f.label :gallery_name %>
+<%= f.select :gallery, gallery_names%><br>
+
+<%= f.submit "Save Artist" %><br>
+
+
+<% end %>

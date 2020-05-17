@@ -1,0 +1,8 @@
+<h1>Painting Page</h1>
+<%= @painting.title%><br>
+<%= link_to("Delete?", painting_path(@painting.id), method: :delete, data: {confirm: "Wanna delete this painting?"}) %><br>
+<h4>This painting has been painted by this artist:</h4>
+<%= link_to "#{@painting.artist.name}", artist_path(@painting.artist.id) %><br>
+
+<br><%= link_to  "Back", paintings_path %><br>
+<br><%= link_to  "Edit Painting?", edit_painting_path %>

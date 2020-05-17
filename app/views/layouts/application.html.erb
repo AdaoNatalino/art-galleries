@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ArtGallery</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <h2><%= link_to  "All Artists", artists_path %></h2>
+    <h2><%= link_to  "All Paintings", paintings_path %></h2>
+    <h2><%= link_to  "All Galleries", galleries_path %></h2>
+
+
+    <h1>Hey, look at us!</h1>
+    <%= yield %>
+  </body>
+</html>

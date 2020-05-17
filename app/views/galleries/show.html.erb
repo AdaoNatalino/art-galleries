@@ -1,0 +1,10 @@
+<h1>Gallery Page</h1>
+<%= @gallery.name%><br>
+<%= link_to("Delete?", gallery_path(@gallery.id), method: :delete, data: {confirm: "Wanna delete this gallery?"}) %><br>
+<h4>This gallery has these paintings:</h4>
+<% @gallery.paintings.each do |paint| %>
+<%= link_to  "#{paint.title}", painting_path(paint.id) %>
+<% end %><br>
+<%= link_to  "Back", galleries_path %><br>
+<%= link_to  "Edit Gallery?", edit_gallery_path %>
+<%= link_to  "All Galleries", galleries_path %>

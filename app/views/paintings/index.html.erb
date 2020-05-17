@@ -1,0 +1,3 @@
+<% @paintings.each do |painting|%>
+<%= link_to  "#{painting.title}", painting_path(painting.id) %><br>
+<% end %>
